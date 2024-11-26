@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <style>
+        *{
+            text-align: center;
+            color: white;
+        }
+        body{
+            background-color: #0a0a0e;
+        }
+        #perguntas{
+            margin-left: 560px;
+            width: 40vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border: solid 2px black;
+            border-radius: 20px;
+            background-color: #16161f;
+            box-shadow: 0px 1px 10px 1px rgb(174, 255, 181);
+            margin-bottom: 40px;
+        }
+        .pergunta{
+            margin-bottom: 100px;
+        }
+        button{
+            margin-bottom: 20px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 2px solid #444;
+            background-color: #2c2c36;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        button:hover {
+            background-color: #3c3c46;
+            border-color: #aaa;
+            cursor: pointer;
+        }
+        img{
+            margin-top: 10px;
+            border-radius: 25px;
+            max-width: 460px;
+            max-height: 545px;
+        }
+        #results{
+            display: flex;
+            flex-direction: column;
+            margin-left: 560px;
+            width: 40vw;
+            max-width: 80vw;
+            justify-content: center;
+            align-items: center;
+            border: solid 2px black;
+            border-radius: 20px;
+            background-color: #16161f;
+            box-shadow: 0px 1px 10px 1px rgb(174, 255, 181);
+        }
+        .radios {
+            display: none; /* Esconder o input original */
+            
+        }
+
+        .label-radio {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid #444;
+            border-radius: 10px;
+            background-color: #2c2c36;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .label-radio:hover {
+            background-color: #3c3c46;
+            border-color: #aaa;
+        }
+
+        .label-radio input {
+            margin-right: 10px; /* Espaço entre o rádio e o texto */
+            
+        }
+
+        .label-radio input:checked + span{
+            background-color: #1abc9c;
+            border-color: #1abc9c;
+            border-radius: 15px;
+            padding: 5px;
+            color: #fff; /* Muda a cor do texto quando selecionado */
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        #show{
+            margin-top: 10px;
+            border-radius: 25px;
+            max-width: 460px;
+            max-height: 545px;
+            min-height: 200px;
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="perguntas">
+        <div class="pergunta">
+            <img src="https://i.pinimg.com/564x/51/9a/e8/519ae8ab05ba9a115ca0a7abf2463668.jpg" alt="" srcset="">
+            <h1>qual sua cor favorita?</h1>
+            <label class="label-radio">
+                <input type="radio" name="p1" class="radios" value="jotaro">
+                <span>preto</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p1" class="radios" value="josuke">
+                <span>azul-escuro</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p1" class="radios" value="giorno">
+                <span>rosa</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p1" class="radios" value="johnny">
+                <span>azul-claro</span>
+            </label>
+        </div>
+        <div class="pergunta">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMnohOmmdvJxpLTbs2iSUZNOkQx74eDag4HQ&s" alt="" srcset="">
+            <h1>qual dessas palavra te define</h1>
+            <label class="label-radio">
+                <input type="radio" name="p2" class="radios" value="jotaro">
+                <span>calma</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p2" class="radios" value="josuke">
+                <span>furia</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p2" class="radios" value="giorno">
+                <span>sonho</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p2" class="radios" value="johnny">
+                <span>determinação</span>
+            </label>
+        </div>
+        <div class="pergunta">
+            <img src="https://i.pinimg.com/originals/3e/88/e1/3e88e1ad6b38d69077faf67f242e30b0.jpg" alt="" srcset="">
+            <h1>qual sua arma você usa?</h1>
+            <label class="label-radio">
+                <input type="radio" name="p3" class="radios" value="jotaro">
+                <span>doze velha</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p3" class="radios" value="josuke">
+                <span>carapina</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p3" class="radios" value="giorno">
+                <span>UMP</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p3" class="radios" value="johnny">
+                <span>M4A1</span>
+            </label>
+        </div>
+        <div class="pergunta">
+            <img src="https://p16-kimg.kwai.net/kimg/EKzM1y8qmgEKAnMzEg1waG90by1vdmVyc2VhGoQBdXBpYy8yMDIyLzA1LzIxLzIzL0JNakF5TWpBMU1qRXlNelEwTURSZk1UVXdNREF3TVRZNU1ETTJNVFk1WHpFMU1EQTJNRGd6TmprMU9UVTVObDh5WHpNPV9vZmZuX0IxNDI2OTI2Y2M2NTkzZTFhMTgyYzA2ZjVlMTk4NTgwMy53ZWJw.webp" alt="" srcset="">
+            <h1>qual seu lugar favorito?</h1>
+            <label class="label-radio">
+                <input type="radio" name="p4" class="radios" value="jotaro">
+                <span>Clock Tower</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p4" class="radios" value="josuke">
+                <span>Kalahari</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p4" class="radios" value="giorno">
+                <span>Bingolao</span>
+            </label>
+            <label class="label-radio">
+                <input type="radio" name="p4" class="radios" value="johnny">
+                <span>Bimasakis</span>
+            </label>
+            
+        </div><br>
+        <button onclick="contarVotos()" id="votos">Enviar</button>
+    </div>
+            <div id="show">
+                <h1 id="resultadofinal"></h1>
+            </div>
+    
+</body>
+<script>
+    function contarVotos() {
+        //criando contadores
+
+        var audio = new Audio('katching.mp3')
+        audio.addEventListener('canplaythrough', function () {
+            audio.play()
+        })
+
+        let contBela = 0
+        let contBranca = 0
+        let contElsa = 0
+        let contVenelope = 0
+
+        //obter os radios da classe radios
+        let radios = document.getElementsByClassName('radios')
+
+        //percorrendo todos os elementos radios
+        for(let i=0; i< radios.length; i++){
+            //testar qual radio esta selecionado
+            if (radios[i].checked) {
+                if (radios[i].value == 'jotaro') {
+                    contBela++;
+                }
+                else if(radios[i].value == 'josuke') {
+                    contBranca++;
+                } 
+                else if(radios[i].value == 'giorno') {
+                    contElsa++;
+                } 
+                else {
+                    contVenelope++;
+                }
+            }
+        }
+        //colocando contadores do h1
+        //document.getElementById('jotaro').innerHTML = "Votos jotaro "+contBela
+        //document.getElementById('josuke').innerHTML = "Votos josuke "+contBranca
+        //document.getElementById('giorno').innerHTML = "Votos giorno "+contElsa
+        //document.getElementById('johnny').innerHTML = "Votos johnny "+contVenelope
+
+        let resultado = document.getElementById('resultadofinal')
+        let imagem = document.getElementById('show')
+        if (contBela > contBranca && contBela > contElsa && contBela > contVenelope) {
+            resultado.innerHTML = "você é o Enzo racha cabesa"
+            setTimeout((contBela) => {
+                window.open('jotaro.html')
+            }, 1000);
+            imagem.style.backgroundImage = 'url(https://i.pinimg.com/564x/51/9a/e8/519ae8ab05ba9a115ca0a7abf2463668.jpg)'
+        } else if (contBranca > contElsa && contBranca > contVenelope){
+            resultado.innerHTML = "você é o Jose Bezerra"
+            setTimeout((contBranca) => {
+                window.open('josuke.html')
+            }, 1000);
+            resultado.style.color = 'blue'
+            imagem.style.backgroundImage = 'url(https://i.pinimg.com/564x/46/76/65/467665632fd4ae520eae9a971467ec71.jpg)'
+        } else if(contElsa > contVenelope){
+            resultado.innerHTML = "você é o igao do capa"
+            setTimeout((contElsa) => {
+                window.open('frozen.html')
+            }, 1000);
+            imagem.style.backgroundImage = 'url(https://i.pinimg.com/originals/3e/88/e1/3e88e1ad6b38d69077faf67f242e30b0.jpg)'
+        } else {
+            resultado.innerHTML = "você é o g2 cabeludo"
+            setTimeout((contVenelope) => {
+                window.open('vanelope.html')
+            }, 1000);
+            imagem.style.backgroundImage = 'url(https://pbs.twimg.com/media/EiJWQttWsAEZnEX.jpg)'
+        }
+
+
+
+          localStorage.setItem('contBela', contBela)
+          localStorage.setItem('contBranca', contBranca)
+          localStorage.setItem('contFrozen', contElsa)
+          localStorage.setItem('contVanelope', contVenelope)
+    }
+</script>
+</html>

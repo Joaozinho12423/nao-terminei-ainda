@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>o seu resultado é G2 Cabeludinho</h1>
+    <h1 id="porcentagem"></h1>
+    <script>
+     let bela = Number(localStorage.getItem('contBela' ))
+    let branca = Number(localStorage.getItem('contBranca' ))
+    let elsa = Number(localStorage.getItem('contFrozen' ))
+    let vanelope = Number(localStorage.getItem('contVanelope'))
+    
+    let total = bela+branca+elsa+vanelope
+    let porc =  (vanelope/total)*100
+    document.getElementById('porcentagem').innerHTML = porc + "%"
+    </script>
+</body>
+</html>
